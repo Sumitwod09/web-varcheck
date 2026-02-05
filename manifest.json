@@ -1,0 +1,37 @@
+{
+    "name": "VARCHECK - Software Development",
+    "short_name": "VARCHECK",
+    "description": "Leading software development company specializing in custom solutions, AI/ML, and digital transformation",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#ff6b35",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "logo.jpeg",
+            "sizes": "512x512",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": [
+        "business",
+        "technology",
+        "productivity"
+    ],
+    "screenshots": [
+        {
+            "src": "screenshot-desktop.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "label": "VARCHECK Homepage"
+        }
+    ]
+}
