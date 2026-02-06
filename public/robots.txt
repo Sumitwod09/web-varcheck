@@ -1,0 +1,17 @@
+# robots.txt for https://varcheck.in
+# Generated: 2026-02-06
+# Allows all crawlers and points to the sitemap for SEO
+
+User-agent: *
+Disallow:
+
+# XML sitemap
+Sitemap: https://varcheck.in/sitemap.xml
+
+# Notes:
+# - We use an empty Disallow to explicitly allow crawling of all public content.
+# - Avoid using Crawl-delay unless you need to throttle specific crawlers (not standard for Google).
+# - Add Disallow rules below (uncomment) when you have admin, staging, or private directories to block.
+# Example:
+# Disallow: /admin/
+# Disallow: /private/

@@ -136,14 +136,35 @@ if (contactForm) {
         const service = formData.get('service');
         const message = formData.get('message');
 
-        if (!name || !email || !phone || !service || !message) {
-            showMessage('❌ Please fill in all fields correctly.', 'error');
+        // Validate required fields
+        if (!name || name.trim().length < 2) {
+            showMessage('❌ Please enter a valid name (at least 2 characters).', 'error');
+            return;
+        }
+
+        if (!email || email.trim().length === 0) {
+            showMessage('❌ Please enter your email address.', 'error');
             return;
         }
 
         // Validate email format
         if (!isValidEmail(email)) {
             showMessage('❌ Please enter a valid email address.', 'error');
+            return;
+        }
+
+        if (!phone || phone.trim().length < 10) {
+            showMessage('❌ Please enter a valid phone number (at least 10 digits).', 'error');
+            return;
+        }
+
+        if (!service || service === '') {
+            showMessage('❌ Please select a service you are interested in.', 'error');
+            return;
+        }
+
+        if (!message || message.trim().length < 10) {
+            showMessage('❌ Please provide more details about your project (at least 10 characters).', 'error');
             return;
         }
 
@@ -155,19 +176,27 @@ if (contactForm) {
             submitButton.disabled = true;
             submitButton.classList.add('loading');
 
+            console.log('📧 Submitting form to Web3Forms...');
+
             // Send form using Web3Forms API
             const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                body: formData
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
             });
 
             const data = await response.json();
+            console.log('📬 Response from Web3Forms:', data);
 
-            if (data.success) {
+            if (response.ok && data.success) {
                 showMessage('✅ Thank you for your message! We will get back to you soon.', 'success');
                 contactForm.reset();
+                console.log('✅ Form submitted successfully!');
             } else {
-                showMessage('❌ Something went wrong. Please try again or email us directly at wodsumit@gmail.com', 'error');
+                showMessage(`❌ ${data.message || 'Something went wrong. Please try again or email us directly at wodsumit@gmail.com'}`, 'error');
+                console.error('❌ Form submission failed:', data);
             }
 
             // Reset button
@@ -176,8 +205,8 @@ if (contactForm) {
             submitButton.classList.remove('loading');
 
         } catch (error) {
-            console.error('Form submission error:', error);
-            showMessage('❌ Network error. Please check your connection and try again.', 'error');
+            console.error('❌ Form submission error:', error);
+            showMessage('❌ Network error. Please check your internet connection and try again.', 'error');
 
             // Reset button
             const submitButton = contactForm.querySelector('button[type="submit"]');
