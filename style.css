@@ -197,6 +197,21 @@ body {
     animation: float 6s ease-in-out infinite;
 }
 
+/* Hero GIF background */
+.hero-gif {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.28;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    z-index: 10;
+}
+
+@media (max-width: 640px) {
+    .hero-gif { opacity: 0.12; background-position: top; }
+}
+
 /* Delay classes */
 .delay-100 {
     animation-delay: 0.1s;
