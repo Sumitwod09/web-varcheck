@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 import { PROJECTS } from "@/lib/projects";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -46,7 +48,7 @@ const WorkPage = () => {
                       ))}
                     </div>
                     <div className="mt-6 flex items-center gap-2 font-body text-sm font-medium text-varcheck-accent group-hover:gap-3 transition-all">
-                      View case study <ArrowRight size={14} />
+                      View case study <FontAwesomeIcon icon={faArrowRight} size={14} />
                     </div>
                   </Link>
                 </motion.div>

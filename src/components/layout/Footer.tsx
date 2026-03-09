@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { FOOTER_LINKS, CONTACT_CHANNELS } from "@/lib/constants";
-import { MessageCircle } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 
 const Footer = () => {
   return (
@@ -13,7 +15,7 @@ const Footer = () => {
               VARCHECK
             </Link>
             <p className="mt-4 font-body text-sm text-varcheck-dark-muted leading-relaxed">
-              The agency that thinks like a startup, executes like an enterprise.
+              The Solution that thinks like a startup, executes like an enterprise.
             </p>
             <a
               href={`https://wa.me/${CONTACT_CHANNELS.whatsapp.number}`}
@@ -21,7 +23,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-6 bg-varcheck-whatsapp text-varcheck-dark font-body text-sm font-medium px-5 py-2.5 rounded-lg transition-all hover:opacity-90"
             >
-              <MessageCircle size={16} />
+              <FontAwesomeIcon icon={faWhatsapp} size="lg" />
               WhatsApp Us
             </a>
           </div>

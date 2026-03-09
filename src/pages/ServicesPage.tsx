@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Smartphone, Monitor, Code, ArrowRight } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMobileScreen, faLaptop, faCode, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 import { SERVICES } from "@/lib/services";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -8,9 +10,9 @@ import SectionHeading from "@/components/shared/SectionHeading";
 import FinalCTA from "@/components/home/FinalCTA";
 
 const iconMap: Record<string, React.ReactNode> = {
-  Smartphone: <Smartphone size={32} />,
-  Monitor: <Monitor size={32} />,
-  Code: <Code size={32} />,
+  Smartphone: <FontAwesomeIcon icon={faMobileScreen} size={32} />,
+  Monitor: <FontAwesomeIcon icon={faLaptop} size={32} />,
+  Code: <FontAwesomeIcon icon={faCode} size={32} />,
 };
 
 const ServicesPage = () => {
@@ -50,7 +52,7 @@ const ServicesPage = () => {
                     to={`/services/${service.slug}`}
                     className="inline-flex items-center gap-2 mt-6 font-body text-sm font-medium text-varcheck-accent hover:gap-3 transition-all"
                   >
-                    Learn more <ArrowRight size={14} />
+                    Learn more <FontAwesomeIcon icon={faArrowRight} size={14} />
                   </Link>
                 </div>
                 <div>

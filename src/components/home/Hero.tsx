@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 import { CONTACT_CHANNELS } from "@/lib/constants";
 
 const Hero = () => {
@@ -18,7 +21,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
           >
             <span className="inline-block font-mono text-xs font-medium tracking-widest uppercase text-varcheck-accent mb-6 px-3 py-1 rounded-full border border-varcheck-dark-border bg-varcheck-dark-surface">
-              Software Development Agency
+              Software Development Solution
             </span>
           </motion.div>
 
@@ -55,7 +58,7 @@ const Hero = () => {
               className="inline-flex items-center gap-2 bg-varcheck-accent hover:bg-varcheck-accent-light text-primary-foreground font-body text-base font-medium px-7 py-3.5 rounded-lg transition-all duration-200 glow-accent hover:shadow-xl"
             >
               Start Your Project
-              <ArrowRight size={18} />
+              <FontAwesomeIcon icon={faArrowRight} size="lg" />
             </Link>
             <a
               href={`https://wa.me/${CONTACT_CHANNELS.whatsapp.number}`}
@@ -63,7 +66,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-varcheck-whatsapp text-varcheck-dark font-body text-base font-medium px-7 py-3.5 rounded-lg transition-all duration-200 hover:opacity-90"
             >
-              <MessageCircle size={18} />
+              <FontAwesomeIcon icon={faWhatsapp} size="lg" />
               WhatsApp Us
             </a>
             <Link
@@ -73,7 +76,7 @@ const Hero = () => {
               View Our Work
             </Link>
           </motion.div>
-        </div>
+        </div><br />
       </div>
     </section>
   );

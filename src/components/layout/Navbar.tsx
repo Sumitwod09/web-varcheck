@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { NAV_LINKS } from "@/lib/constants";
-import { Menu, X } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -60,7 +62,7 @@ const Navbar = () => {
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-varcheck-dark-text p-2"
         >
-          {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          {mobileOpen ? <FontAwesomeIcon icon={faXmark} size={24} /> : <FontAwesomeIcon icon={faBars} size={24} />}
         </button>
       </div>
 

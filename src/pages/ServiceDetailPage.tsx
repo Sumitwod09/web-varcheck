@@ -1,15 +1,18 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Smartphone, Monitor, Code, ArrowLeft, ArrowRight, MessageCircle } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMobileScreen, faLaptop, faCode, faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+
 import { SERVICES } from "@/lib/services";
 import { CONTACT_CHANNELS } from "@/lib/constants";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 const iconMap: Record<string, React.ReactNode> = {
-  Smartphone: <Smartphone size={40} />,
-  Monitor: <Monitor size={40} />,
-  Code: <Code size={40} />,
+  Smartphone: <FontAwesomeIcon icon={faMobileScreen} size="2xl" />,
+  Monitor: <FontAwesomeIcon icon={faLaptop} size="2xl" />,
+  Code: <FontAwesomeIcon icon={faCode} size="2xl" />,
 };
 
 const ServiceDetailPage = () => {
@@ -24,7 +27,7 @@ const ServiceDetailPage = () => {
           <div className="text-center">
             <h1 className="text-display-xl text-varcheck-dark-text">Service not found</h1>
             <Link to="/services" className="mt-4 inline-flex items-center gap-2 text-varcheck-accent font-body">
-              <ArrowLeft size={16} /> Back to services
+              <FontAwesomeIcon icon={faArrowLeft} /> Back to services
             </Link>
           </div>
         </div>
@@ -40,7 +43,7 @@ const ServiceDetailPage = () => {
         <section className="section-dark section-padding pt-32 md:pt-40">
           <div className="container-main">
             <Link to="/services" className="inline-flex items-center gap-2 text-varcheck-dark-muted hover:text-varcheck-accent font-body text-sm mb-8 transition-colors">
-              <ArrowLeft size={14} /> All Services
+              <FontAwesomeIcon icon={faArrowLeft} /> All Services
             </Link>
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <div className="text-varcheck-accent mb-6">{iconMap[service.icon]}</div>
@@ -76,7 +79,7 @@ const ServiceDetailPage = () => {
                   to="/contact"
                   className="inline-flex items-center gap-2 bg-varcheck-accent hover:bg-varcheck-accent-light text-primary-foreground font-body text-base font-medium px-7 py-3.5 rounded-lg transition-all glow-accent"
                 >
-                  Get a Quote <ArrowRight size={18} />
+                  Get a Quote <FontAwesomeIcon icon={faArrowRight} size="lg" />
                 </Link>
                 <a
                   href={`https://wa.me/${CONTACT_CHANNELS.whatsapp.number}`}
@@ -84,7 +87,7 @@ const ServiceDetailPage = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-varcheck-whatsapp text-varcheck-dark font-body text-base font-medium px-7 py-3.5 rounded-lg hover:opacity-90 transition-all"
                 >
-                  <MessageCircle size={18} /> WhatsApp Us
+                  <FontAwesomeIcon icon={faWhatsapp} size="lg" /> WhatsApp Us
                 </a>
               </div>
             </div>

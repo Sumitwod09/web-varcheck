@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 import { PROJECTS } from "@/lib/projects";
 import SectionHeading from "@/components/shared/SectionHeading";
 
@@ -39,7 +41,7 @@ const PortfolioTeaser = () => {
                   ))}
                 </div>
                 <div className="mt-6 flex items-center gap-2 font-body text-sm font-medium text-varcheck-accent group-hover:gap-3 transition-all">
-                  View case study <ArrowRight size={14} />
+                  View case study <FontAwesomeIcon icon={faArrowRight} size={14} />
                 </div>
               </Link>
             </motion.div>
@@ -56,7 +58,7 @@ const PortfolioTeaser = () => {
             to="/work"
             className="inline-flex items-center gap-2 font-body text-base font-medium text-varcheck-accent hover:gap-3 transition-all"
           >
-            View all projects <ArrowRight size={16} />
+            View all projects <FontAwesomeIcon icon={faArrowRight} size={16} />
           </Link>
         </motion.div>
       </div>

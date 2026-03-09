@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
-import { Users, Target, Heart } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUsers, faBullseye, faHeart } from '@fortawesome/free-solid-svg-icons';
+
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SectionHeading from "@/components/shared/SectionHeading";
 import FinalCTA from "@/components/home/FinalCTA";
 
 const values = [
-  { icon: <Target size={24} />, title: "Ship Fast", description: "We believe in speed-to-market. Your idea deserves to be in users' hands — not stuck in an endless development cycle." },
-  { icon: <Heart size={24} />, title: "Stay Honest", description: "No hidden costs. No vague timelines. We tell you exactly what it takes and deliver exactly what we promise." },
-  { icon: <Users size={24} />, title: "Think Partnership", description: "We're not vendors. We're your extended tech team. Your success is our success — it's that simple." },
+  { icon: <FontAwesomeIcon icon={faBullseye} size={24} />, title: "Ship Fast", description: "We believe in speed-to-market. Your idea deserves to be in users' hands — not stuck in an endless development cycle." },
+  { icon: <FontAwesomeIcon icon={faHeart} size={24} />, title: "Stay Honest", description: "No hidden costs. No vague timelines. We tell you exactly what it takes and deliver exactly what we promise." },
+  { icon: <FontAwesomeIcon icon={faUsers} size={24} />, title: "Think Partnership", description: "We're not vendors. We're your extended tech team. Your success is our success — it's that simple." },
 ];
 
 const AboutPage = () => {
@@ -20,8 +22,8 @@ const AboutPage = () => {
           <div className="container-main">
             <SectionHeading
               badge="About Varcheck"
-              title="The agency that thinks like a startup, executes like an enterprise."
-              description="We're a full-stack software development agency based in India, building apps, websites, and custom software for clients worldwide."
+              title="The Solution that thinks like a startup, executes like an enterprise."
+              description="We're a full-stack software development solution based in India, building apps, websites, and custom software for clients worldwide."
               dark
             />
           </div>

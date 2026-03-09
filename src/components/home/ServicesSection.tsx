@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Smartphone, Monitor, Code, ArrowRight } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMobileScreen, faLaptop, faCode, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+
 import { SERVICES } from "@/lib/services";
 import SectionHeading from "@/components/shared/SectionHeading";
 
 const iconMap: Record<string, React.ReactNode> = {
-  Smartphone: <Smartphone size={28} />,
-  Monitor: <Monitor size={28} />,
-  Code: <Code size={28} />,
+  Smartphone: <FontAwesomeIcon icon={faMobileScreen} size={28} />,
+  Monitor: <FontAwesomeIcon icon={faLaptop} size={28} />,
+  Code: <FontAwesomeIcon icon={faCode} size={28} />,
 };
 
 const ServicesSection = () => {
@@ -38,7 +40,7 @@ const ServicesSection = () => {
                   {service.description}
                 </p>
                 <div className="mt-6 flex items-center gap-2 font-body text-sm font-medium text-varcheck-accent group-hover:gap-3 transition-all">
-                  Learn more <ArrowRight size={14} />
+                  Learn more <FontAwesomeIcon icon={faArrowRight} size={14} />
                 </div>
               </Link>
             </motion.div>

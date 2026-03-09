@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import { Quote } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
+
 import { TESTIMONIALS } from "@/lib/constants";
 import SectionHeading from "@/components/shared/SectionHeading";
 
@@ -23,7 +25,7 @@ const TestimonialsSection = () => {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="card-light"
             >
-              <Quote size={24} className="text-varcheck-accent/30 mb-4" />
+              <FontAwesomeIcon icon={faQuoteLeft} size={24} className="text-varcheck-accent/30 mb-4" />
               <p className="font-body text-sm text-varcheck-light-text leading-relaxed">
                 "{item.quote}"
               </p>

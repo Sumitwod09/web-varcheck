@@ -72,7 +72,7 @@ export const TESTIMONIALS = [
     avatar: "",
   },
   {
-    quote: "The best agency experience we've had. Transparent pricing, fast delivery, and they actually listen to what you need.",
+    quote: "The best solution experience we've had. Transparent pricing, fast delivery, and they actually listen to what you need.",
     name: "James Wilson",
     role: "Product Manager, CloudScale",
     avatar: "",

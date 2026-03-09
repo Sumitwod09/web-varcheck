@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
-import { Zap, Shield, Layers, Globe } from "lucide-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBolt, faShieldHalved, faLayerGroup, faGlobe } from '@fortawesome/free-solid-svg-icons';
+
 import { DIFFERENTIATORS } from "@/lib/constants";
 import SectionHeading from "@/components/shared/SectionHeading";
 
 const iconMap: Record<string, React.ReactNode> = {
-  Zap: <Zap size={24} />,
-  Shield: <Shield size={24} />,
-  Layers: <Layers size={24} />,
-  Globe: <Globe size={24} />,
+  Zap: <FontAwesomeIcon icon={faBolt} size={24} />,
+  Shield: <FontAwesomeIcon icon={faShieldHalved} size={24} />,
+  Layers: <FontAwesomeIcon icon={faLayerGroup} size={24} />,
+  Globe: <FontAwesomeIcon icon={faGlobe} size={24} />,
 };
 
 const Differentiators = () => {
@@ -17,7 +19,7 @@ const Differentiators = () => {
         <SectionHeading
           badge="Why Varcheck"
           title="Built different. Delivered better."
-          description="Four pillars that set us apart from every other agency."
+          description="Four pillars that set us apart from every other solution."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
