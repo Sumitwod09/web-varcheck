@@ -81,17 +81,18 @@ export const TESTIMONIALS = [
 
 export const CONTACT_CHANNELS = {
   whatsapp: {
-    number: "919999999999",
+    number: "918141916704",
+    message: "Hi Varcheck team! 👋 I'm interested in your services and would love to discuss a project. Let's build something great together! 🚀",
     label: "WhatsApp",
     description: "Chat with us directly. Response within 4 hours.",
   },
   email: {
-    address: "hello@varcheck.in",
+    address: "varcheckllp@gmail.com",
     label: "Email",
     description: "Send us a detailed brief.",
   },
   phone: {
-    number: "+91-99999-99999",
+    number: "+91 8141916704",
     label: "Phone",
     description: "Call us during business hours.",
   },

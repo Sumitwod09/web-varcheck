@@ -18,7 +18,7 @@ const Footer = () => {
               The Solution that thinks like a startup, executes like an enterprise.
             </p>
             <a
-              href={`https://wa.me/${CONTACT_CHANNELS.whatsapp.number}`}
+              href={`https://wa.me/${CONTACT_CHANNELS.whatsapp.number}?text=${encodeURIComponent(CONTACT_CHANNELS.whatsapp.message)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 mt-6 bg-varcheck-whatsapp text-varcheck-dark font-body text-sm font-medium px-5 py-2.5 rounded-lg transition-all hover:opacity-90"

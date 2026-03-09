@@ -25,7 +25,7 @@ const ContactPage = () => {
   };
 
   const channels = [
-    { icon: <FontAwesomeIcon icon={faWhatsapp} size="lg" />, ...CONTACT_CHANNELS.whatsapp, href: `https://wa.me/${CONTACT_CHANNELS.whatsapp.number}`, color: "bg-varcheck-whatsapp" },
+    { icon: <FontAwesomeIcon icon={faWhatsapp} size="lg" />, ...CONTACT_CHANNELS.whatsapp, href: `https://wa.me/${CONTACT_CHANNELS.whatsapp.number}?text=${encodeURIComponent(CONTACT_CHANNELS.whatsapp.message)}`, color: "bg-varcheck-whatsapp" },
     { icon: <FontAwesomeIcon icon={faEnvelope} size="lg" />, ...CONTACT_CHANNELS.email, href: `mailto:${CONTACT_CHANNELS.email.address}`, color: "bg-varcheck-accent" },
     { icon: <FontAwesomeIcon icon={faPhone} size="lg" />, ...CONTACT_CHANNELS.phone, href: `tel:${CONTACT_CHANNELS.phone.number}`, color: "bg-varcheck-accent-dark" },
     { icon: <FontAwesomeIcon icon={faLinkedin} size="lg" />, ...CONTACT_CHANNELS.linkedin, href: CONTACT_CHANNELS.linkedin.url, color: "bg-blue-600" },
