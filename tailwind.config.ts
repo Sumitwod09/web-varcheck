@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Syne", "sans-serif"],
-        body: ["Outfit", "sans-serif"],
+        display: ["Zona Pro", "sans-serif"],
+        body: ["Zona Pro", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
       },
       fontSize: {
