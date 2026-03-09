@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faPhone, faCommentDots, faPaperPlane, faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faPhone, faPaperPlane, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 import { CONTACT_CHANNELS } from "@/lib/constants";
 import Navbar from "@/components/layout/Navbar";
@@ -25,10 +25,10 @@ const ContactPage = () => {
   };
 
   const channels = [
-    { icon: <FontAwesomeIcon icon={faCommentDots} size={20} />, ...CONTACT_CHANNELS.whatsapp, href: `https://wa.me/${CONTACT_CHANNELS.whatsapp.number}`, color: "bg-varcheck-whatsapp" },
-    { icon: <FontAwesomeIcon icon={faEnvelope} size={20} />, ...CONTACT_CHANNELS.email, href: `mailto:${CONTACT_CHANNELS.email.address}`, color: "bg-varcheck-accent" },
-    { icon: <FontAwesomeIcon icon={faPhone} size={20} />, ...CONTACT_CHANNELS.phone, href: `tel:${CONTACT_CHANNELS.phone.number}`, color: "bg-varcheck-accent-dark" },
-    { icon: <FontAwesomeIcon icon={faLinkedin} size={20} />, ...CONTACT_CHANNELS.linkedin, href: CONTACT_CHANNELS.linkedin.url, color: "bg-blue-600" },
+    { icon: <FontAwesomeIcon icon={faWhatsapp} size="lg" />, ...CONTACT_CHANNELS.whatsapp, href: `https://wa.me/${CONTACT_CHANNELS.whatsapp.number}`, color: "bg-varcheck-whatsapp" },
+    { icon: <FontAwesomeIcon icon={faEnvelope} size="lg" />, ...CONTACT_CHANNELS.email, href: `mailto:${CONTACT_CHANNELS.email.address}`, color: "bg-varcheck-accent" },
+    { icon: <FontAwesomeIcon icon={faPhone} size="lg" />, ...CONTACT_CHANNELS.phone, href: `tel:${CONTACT_CHANNELS.phone.number}`, color: "bg-varcheck-accent-dark" },
+    { icon: <FontAwesomeIcon icon={faLinkedin} size="lg" />, ...CONTACT_CHANNELS.linkedin, href: CONTACT_CHANNELS.linkedin.url, color: "bg-blue-600" },
   ];
 
   return (
@@ -71,7 +71,7 @@ const ContactPage = () => {
                       <p className="font-display text-sm font-bold text-varcheck-light-text">{ch.label}</p>
                       <p className="font-body text-xs text-varcheck-light-muted">{ch.description}</p>
                     </div>
-                    <FontAwesomeIcon icon={faArrowRight} size={14} className="ml-auto text-varcheck-light-muted group-hover:text-varcheck-accent transition-colors" />
+                    <FontAwesomeIcon icon={faArrowRight} size="sm" className="ml-auto text-varcheck-light-muted group-hover:text-varcheck-accent transition-colors" />
                   </motion.a>
                 ))}
               </div>
@@ -154,7 +154,7 @@ const ContactPage = () => {
                     className="inline-flex items-center gap-2 bg-varcheck-accent hover:bg-varcheck-accent-light text-primary-foreground font-body text-base font-medium px-7 py-3.5 rounded-lg transition-all duration-200 glow-accent disabled:opacity-50"
                   >
                     {sending ? "Sending..." : "Send Message"}
-                    <FontAwesomeIcon icon={faPaperPlane} size={16} />
+                    <FontAwesomeIcon icon={faPaperPlane} size="sm" />
                   </button>
                 </form>
               </motion.div>
