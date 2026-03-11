@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
-@import url('https://fonts.cdnfonts.com/css/zona-pro');
+@import url('https://fonts.cdnfonts.com/css/nexa-bold');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -60,8 +60,8 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
 
     /* Typography */
-    --font-display: 'Zona Pro', sans-serif;
-    --font-body: 'Zona Pro', sans-serif;
+    --font-display: 'Nexa', sans-serif;
+    --font-body: 'Nexa', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
   }
 
