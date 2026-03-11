@@ -8,9 +8,9 @@ import SectionHeading from "@/components/shared/SectionHeading";
 import FinalCTA from "@/components/home/FinalCTA";
 
 const values = [
-  { icon: <FontAwesomeIcon icon={faBullseye} size={24} />, title: "Ship Fast", description: "We believe in speed-to-market. Your idea deserves to be in users' hands — not stuck in an endless development cycle." },
-  { icon: <FontAwesomeIcon icon={faHeart} size={24} />, title: "Stay Honest", description: "No hidden costs. No vague timelines. We tell you exactly what it takes and deliver exactly what we promise." },
-  { icon: <FontAwesomeIcon icon={faUsers} size={24} />, title: "Think Partnership", description: "We're not vendors. We're your extended tech team. Your success is our success — it's that simple." },
+  { icon: <FontAwesomeIcon icon={faBullseye} size="xl" />, title: "Ship Fast", description: "We believe in speed-to-market. Your idea deserves to be in users' hands — not stuck in an endless development cycle." },
+  { icon: <FontAwesomeIcon icon={faHeart} size="xl" />, title: "Stay Honest", description: "No hidden costs. No vague timelines. We tell you exactly what it takes and deliver exactly what we promise." },
+  { icon: <FontAwesomeIcon icon={faUsers} size="xl" />, title: "Think Partnership", description: "We're not vendors. We're your extended tech team. Your success is our success — it's that simple." },
 ];
 
 const AboutPage = () => {

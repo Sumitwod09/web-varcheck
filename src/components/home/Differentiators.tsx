@@ -6,10 +6,10 @@ import { DIFFERENTIATORS } from "@/lib/constants";
 import SectionHeading from "@/components/shared/SectionHeading";
 
 const iconMap: Record<string, React.ReactNode> = {
-  Zap: <FontAwesomeIcon icon={faBolt} size={24} />,
-  Shield: <FontAwesomeIcon icon={faShieldHalved} size={24} />,
-  Layers: <FontAwesomeIcon icon={faLayerGroup} size={24} />,
-  Globe: <FontAwesomeIcon icon={faGlobe} size={24} />,
+  Zap: <FontAwesomeIcon icon={faBolt} className="w-6 h-6" />,
+  Shield: <FontAwesomeIcon icon={faShieldHalved} className="w-6 h-6" />,
+  Layers: <FontAwesomeIcon icon={faLayerGroup} className="w-6 h-6" />,
+  Globe: <FontAwesomeIcon icon={faGlobe} className="w-6 h-6" />,
 };
 
 const Differentiators = () => {
@@ -33,7 +33,7 @@ const Differentiators = () => {
               className="card-light flex gap-5"
             >
               <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-varcheck-accent/10 flex items-center justify-center text-varcheck-accent">
-                {iconMap[item.icon]}
+                {iconMap[item.icon as keyof typeof iconMap]}
               </div>
               <div>
                 <h3 className="font-display text-lg font-bold text-varcheck-light-text">{item.title}</h3>
