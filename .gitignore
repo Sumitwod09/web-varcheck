@@ -19,9 +19,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# local env files
-.env*.local
+# env files (never commit any .env*, incl. .env.example)
 .env
+.env.*
 
 # typescript
 *.tsbuildinfo
