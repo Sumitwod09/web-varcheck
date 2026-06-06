@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import SmoothScroll from "@/components/SmoothScroll";
+import ChatWidget from "@/components/ChatWidget";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -48,6 +49,7 @@ export default function RootLayout({
         <div className="grain-overlay" aria-hidden="true" />
         <div className="vignette-overlay" aria-hidden="true" />
         {children}
+        <ChatWidget />
       </body>
     </html>
   );
