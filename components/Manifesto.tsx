@@ -13,8 +13,8 @@ interface Stat {
 
 const STATS: Stat[] = [
   { value: 5, suffix: "+", label: "Years", sub: "and somehow still improving" },
-  { value: 100, suffix: "%", label: "Clients who stayed", sub: "the rest simply couldn't keep up" },
-  { value: 0, suffix: "", label: "Compromises made", sub: "not even on the small stuff" },
+  { value: 100, suffix: "%", label: "Client Retention", sub: "the rest simply couldn't keep up" },
+  { value: 0, suffix: "", label: "Compromises Made", sub: "not even on the small stuff" },
 ];
 
 export default function Manifesto() {
