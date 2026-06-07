@@ -9,6 +9,7 @@ interface Service {
   no: string;
   title: string;
   desc: string;
+  detail: string;
 }
 
 const SERVICES: Service[] = [
@@ -16,21 +17,29 @@ const SERVICES: Service[] = [
     no: "01",
     title: "Software Engineering",
     desc: "Full-stack, cross-platform, and unreasonably fast to ship.",
+    detail:
+      "Next.js, React, Node.js, Supabase, Firebase. Full-stack from database schema to deployed production. No handoffs, no miscommunication.",
   },
   {
     no: "02",
     title: "UI/UX Design",
     desc: "Interfaces that make your competitors feel bad about theirs.",
+    detail:
+      "Figma to pixel-perfect implementation. Design systems, component libraries, and interfaces that convert because they make sense, not because they look pretty.",
   },
   {
     no: "03",
     title: "Mobile Apps",
     desc: "React Native and Flutter. One codebase. No excuses.",
+    detail:
+      "React Native and Flutter. One codebase targeting iOS and Android. Built for real users, tested on real devices, shipped without excuses.",
   },
   {
     no: "04",
     title: "Design Systems",
     desc: "The kind of consistency that makes designers cry happy tears.",
+    detail:
+      "Token-based, component-driven, documented. The kind of system where a new developer on the team feels productive on day one, not day thirty.",
   },
 ];
 
@@ -107,6 +116,9 @@ export default function Services() {
                 </h3>
                 <p className="mt-4 max-w-md text-base leading-relaxed text-white/50">
                   {service.desc}
+                </p>
+                <p className="mt-3 max-w-md text-sm leading-relaxed text-white/40">
+                  {service.detail}
                 </p>
               </div>
             </motion.article>

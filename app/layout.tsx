@@ -20,12 +20,44 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Varcheck — We build things embarrassingly good.",
   description:
-    "Varcheck is a software and design studio led by Sumit Wod. Software. Design. Strategy. Not in that order.",
+    "Varcheck is a software and design studio led by Sumit Wod. Full-stack development, UI/UX design, and mobile apps. Based in India. Ships fast. No compromises.",
+  keywords: [
+    "web development",
+    "UI/UX design",
+    "Next.js",
+    "React Native",
+    "Flutter",
+    "software studio",
+    "India",
+    "Varcheck",
+    "Sumit Wod",
+  ],
+  authors: [{ name: "Sumit Wod", url: "https://sumitwod.vercel.app" }],
+  creator: "Sumit Wod",
   metadataBase: new URL("https://varcheck.in"),
   openGraph: {
-    title: "Varcheck Studio",
-    description: "We build things embarrassingly good.",
+    title: "Varcheck — We build things embarrassingly good.",
+    description:
+      "Full-stack development, UI/UX design, and mobile apps. Based in India.",
+    url: "https://varcheck.in",
+    siteName: "Varcheck Studio",
+    locale: "en_IN",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Varcheck — We build things embarrassingly good.",
+    description:
+      "Full-stack development, UI/UX design, and mobile apps. Based in India.",
+    creator: "@sumit_wod",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 };
 
@@ -43,6 +75,41 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body>
+        {/* Structured data for crawlers */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              name: "Varcheck Studio",
+              description:
+                "Full-stack software development, UI/UX design, and mobile app studio based in India. Led by Sumit Wod.",
+              url: "https://varcheck.in",
+              logo: "https://varcheck.in/logo.svg",
+              image: "https://varcheck.in/opengraph-image",
+              founder: {
+                "@type": "Person",
+                name: "Sumit Wod",
+                url: "https://sumitwod.vercel.app",
+              },
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Ahmedabad",
+                addressRegion: "Gujarat",
+                addressCountry: "IN",
+              },
+              serviceType: [
+                "Web Development",
+                "UI/UX Design",
+                "Mobile App Development",
+                "Design Systems",
+              ],
+              areaServed: "Worldwide",
+              priceRange: "₹₹₹",
+            }),
+          }}
+        />
         <SmoothScroll />
         <CustomCursor />
         {/* Cinematic overlays */}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://varcheck.in/sitemap.xml

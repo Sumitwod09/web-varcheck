@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
 const LINKS = [
@@ -40,12 +41,17 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:h-20 md:px-10">
-        <a
-          href="#top"
-          className="font-display text-lg font-bold tracking-tightest text-white md:text-xl"
-        >
-          VAR<span className="text-acid">CHECK</span>
-        </a>
+        <Link href="/" aria-label="Varcheck Studio" className="flex items-center">
+          {/* SVG wordmark — real img tag so crawlers can find the logo */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.svg"
+            alt="Varcheck Studio"
+            width={140}
+            height={28}
+            style={{ display: "block" }}
+          />
+        </Link>
 
         {/* Desktop links */}
         <ul className="hidden items-center gap-10 md:flex">

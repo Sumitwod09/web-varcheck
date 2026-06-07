@@ -12,6 +12,8 @@ interface Project {
   tech: string[];
   url: string;
   linkLabel: string;
+  shot: string;
+  shotAlt: string;
 }
 
 const PROJECTS: Project[] = [
@@ -23,6 +25,8 @@ const PROJECTS: Project[] = [
     tech: ["Next.js", "Tailwind CSS", "SEO"],
     url: "https://www.mbrvastukalp.in",
     linkLabel: "View live site →",
+    shot: "https://api.microlink.io/?url=https%3A%2F%2Fwww.mbrvastukalp.in&screenshot=true&meta=false&embed=screenshot.url",
+    shotAlt: "MBR Vastukalp website screenshot",
   },
   {
     no: "02",
@@ -32,6 +36,8 @@ const PROJECTS: Project[] = [
     tech: ["Next.js", "Tailwind CSS", "E-commerce"],
     url: "https://www.savikafoods.in",
     linkLabel: "View live site →",
+    shot: "https://api.microlink.io/?url=https%3A%2F%2Fwww.savikafoods.in&screenshot=true&meta=false&embed=screenshot.url",
+    shotAlt: "Savika Foods website screenshot",
   },
   {
     no: "03",
@@ -41,6 +47,8 @@ const PROJECTS: Project[] = [
     tech: ["Next.js", "Framer Motion", "Tailwind CSS"],
     url: "https://sumitwod.vercel.app",
     linkLabel: "View live site →",
+    shot: "https://api.microlink.io/?url=https%3A%2F%2Fsumitwod.vercel.app&screenshot=true&meta=false&embed=screenshot.url",
+    shotAlt: "Sumit Wod portfolio screenshot",
   },
   {
     no: "04",
@@ -50,6 +58,8 @@ const PROJECTS: Project[] = [
     tech: ["Next.js", "Tailwind CSS", "WhatsApp Integration"],
     url: "https://houseofsaanjh.vercel.app",
     linkLabel: "View live site →",
+    shot: "https://api.microlink.io/?url=https%3A%2F%2Fhouseofsaanjh.vercel.app&screenshot=true&meta=false&embed=screenshot.url",
+    shotAlt: "House of Saanjh website screenshot",
   },
 ];
 
@@ -114,6 +124,26 @@ export default function WorkSection() {
               data-cursor="hover"
               className="work-card group relative flex flex-col rounded-2xl border border-[#1a1a1a] bg-[#0a0a0a] p-8 transition-colors duration-200 hover:border-white md:p-10"
             >
+              {/* Live screenshot via Microlink (plain img — external dynamic URL) */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={project.shot}
+                alt={project.shotAlt}
+                width={800}
+                height={450}
+                loading="lazy"
+                style={{
+                  width: "100%",
+                  height: "200px",
+                  objectFit: "cover",
+                  objectPosition: "top",
+                  borderRadius: "4px",
+                  marginBottom: "24px",
+                  border: "1px solid #1a1a1a",
+                  display: "block",
+                }}
+              />
+
               {/* Project number */}
               <span className="font-black leading-none text-white opacity-[0.15] transition-opacity duration-200 group-hover:opacity-40 text-6xl md:text-7xl">
                 {project.no}
