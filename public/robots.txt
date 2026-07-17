@@ -1,4 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /dashboard/
+Disallow: /workspace/
+Disallow: /vault/
 
-Sitemap: https://varcheck.in/sitemap.xml
+Sitemap: https://certussnap.com/sitemap.xml
