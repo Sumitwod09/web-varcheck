@@ -85,7 +85,7 @@ export default function NotFound() {
           opacity: 0.5,
         }}
       >
-        Varcheck v1.0.0
+        VARCHECK v1.0.0
       </div>
     </div>
   );

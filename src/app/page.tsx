@@ -129,7 +129,7 @@ export default function LandingPage() {
             className={`${styles.navBrand} ${!scrolled ? styles.navBrandTransparent : ''}`}
             onClick={() => scrollTo('hero-section')}
           >
-            Varcheck
+            VARCHECK
           </button>
           <ul className={styles.navLinks}>
             <li>
@@ -178,7 +178,7 @@ export default function LandingPage() {
           </div>
 
           <h1 className={styles.heroTitle}>
-            Varcheck
+            VARCHECK
             <span className={styles.heroTitleAccent}>
               Ad-hoc verification for luxury real estate
             </span>
@@ -475,8 +475,8 @@ export default function LandingPage() {
       <footer className={styles.footer} id="footer">
         <div className={styles.footerInner}>
           <div className={styles.footerLeft}>
-            <span className={styles.footerBrand}>Varcheck</span>
-            <span className={styles.footerCopy}>{new Date().getFullYear()} Varcheck Systems. All rights reserved.</span>
+            <span className={styles.footerBrand}>VARCHECK</span>
+            <span className={styles.footerCopy}>{new Date().getFullYear()} VARCHECK Systems. All rights reserved.</span>
           </div>
           <div className={styles.footerStatus}>
             <div className={styles.footerStatusDot} />

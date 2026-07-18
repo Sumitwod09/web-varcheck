@@ -9,7 +9,7 @@ export const supabase = supabaseUrl && supabaseAnonKey
 
 export function getSupabaseClient() {
   if (!supabase) {
-    console.warn('[Varcheck] Supabase credentials not configured - using localStorage fallback');
+    console.warn('[VARCHECK] Supabase credentials not configured - using localStorage fallback');
     return null;
   }
   return supabase;

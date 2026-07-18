@@ -7,7 +7,7 @@ import { CheckIcon } from '@/components/icons';
 import styles from './InterceptOverlay.module.css';
 
 const SYSTEM_LOGS = [
-  { prefix: '[SYS]', text: 'Varcheck v1.0.0 - verification engine initializing' },
+  { prefix: '[SYS]', text: 'VARCHECK v1.0.0 - verification engine initializing' },
   { prefix: '[NET]', text: 'Secure handshake protocol established', highlight: true },
   { prefix: '[DB]', text: 'Supabase ledger connection: standby mode' },
   { prefix: '[AUTH]', text: 'Clerk identity provider: awaiting configuration' },
@@ -190,7 +190,7 @@ export default function InterceptOverlay() {
 
             <motion.div className={styles.systemHeader} variants={lineVariants}>
               <div className={styles.statusDot} />
-              <span className={styles.systemLabel}>Varcheck - System Terminal</span>
+              <span className={styles.systemLabel}>VARCHECK - System Terminal</span>
             </motion.div>
 
             {SYSTEM_LOGS.map((log, i) => (
@@ -218,7 +218,7 @@ export default function InterceptOverlay() {
                   <div className={styles.promptLabel}>Access Request</div>
                   <h2 className={styles.promptTitle}>This module is under construction</h2>
                   <p className={styles.promptDescription}>
-                    Varcheck is actively building this feature. Submit your email to receive priority access when the system goes live. Your data is not stored beyond this session.
+                    VARCHECK is actively building this feature. Submit your email to receive priority access when the system goes live. Your data is not stored beyond this session.
                   </p>
                   <form onSubmit={handleSubmit}>
                     <div className={styles.inputRow}>

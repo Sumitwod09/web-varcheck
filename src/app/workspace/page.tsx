@@ -150,7 +150,7 @@ export default function WorkspacePage() {
         <div className={styles.headerInner}>
           <button className={styles.brand} onClick={() => router.push('/')}>
             <ShieldIcon size={20} />
-            <span>Varcheck</span>
+            <span>VARCHECK</span>
           </button>
           <nav className={styles.nav}>
             <button className={styles.navLinkActive}>Workspace</button>

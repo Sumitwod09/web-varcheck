@@ -124,7 +124,7 @@ function VaultContent() {
             <div className={styles.vaultHeader}>
               <div className={styles.vaultLogo}>
                 <ShieldIcon size={14} />
-                <span>Varcheck Vault</span>
+                <span>VARCHECK Vault</span>
               </div>
               <div className={styles.securityBadge}>
                 <span>AES-256</span>

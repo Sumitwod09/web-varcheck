@@ -49,7 +49,7 @@ export default function SignInPage() {
       <div className={styles.authCard}>
         <div className={styles.logoArea}>
           <ShieldIcon size={32} />
-          <h1 className={styles.logoTitle}>Varcheck</h1>
+          <h1 className={styles.logoTitle}>VARCHECK</h1>
           <span className={styles.logoSub}>Compliance Portal v1.0.0</span>
         </div>
 

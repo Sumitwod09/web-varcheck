@@ -28,7 +28,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Varcheck - Ad-Hoc Verification for Luxury Real Estate',
+  title: 'VARCHECK - Ad-Hoc Verification for Luxury Real Estate',
   description:
     'Secure, mobile-first compliance verification for luxury real estate agents handling transactions with unrepresented parties. Generate intake links, capture documents via isolated vault, deliver standardized PDF packages.',
   keywords: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: 'Varcheck - Verification Engine',
+    title: 'VARCHECK - Verification Engine',
     description:
       'Ad-hoc compliance verification for luxury real estate transactions.',
     type: 'website',

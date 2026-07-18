@@ -85,7 +85,7 @@ COMPLIANCE STATEMENTS
 ----------------------------------------------------------------------
 DATA SECURITY & IMMUTABILITY RETENTION LOG
 ----------------------------------------------------------------------
-[NOTICE] Under Varcheck security protocols:
+[NOTICE] Under VARCHECK security protocols:
 All raw photos, scanned files, identity document images, and beneficial
 ownership declaration forms have been successfully PURGED from our
 ledger databases. 
@@ -120,7 +120,7 @@ Audit Package Status: SECURED & VERIFIED
         <div className={styles.headerInner}>
           <button className={styles.brand} onClick={() => router.push('/')}>
             <ShieldIcon size={20} />
-            <span>Varcheck</span>
+            <span>VARCHECK</span>
           </button>
           <nav className={styles.nav}>
             <button className={styles.navLink} onClick={() => router.push('/workspace')}>
